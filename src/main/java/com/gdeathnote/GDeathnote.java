@@ -19,7 +19,7 @@ public class GDeathnote extends JavaPlugin {
         saveDefaultConfig();
         Bukkit.getPluginManager().registerEvents(new BookListeners(), this);
         getCommand("gdeathnote").setExecutor(new GDeathnoteCommand());
-        getLogger().fine("Plugin is enabled.");
+        getLogger().info("Plugin is enabled.");
     }
 
     @Override
