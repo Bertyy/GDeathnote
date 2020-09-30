@@ -1,0 +1,6 @@
+## GDeathnote ##
+config:
+  broadcast-death: true
+messages:
+  broadcast-message: '&cO jogador &e{killed} &cmorreu pelo Deathnote.'
+  playerdeath-message: '&cVocê morreu pelo Deathnote.'

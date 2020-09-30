@@ -1,0 +1,9 @@
+name: GDeathnote
+version: ${project.version}
+main: com.gdeathnote.GDeathnote
+api-version: 1.16
+authors: [ ZilloTheGamer ]
+description: Plugin de Deathnote
+website: https://youtube.com/ZilloTheGamer
+commands:
+  gdeathnote:
