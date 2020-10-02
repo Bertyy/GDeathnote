@@ -43,7 +43,9 @@ public class BookListeners implements Listener {
                 }
                 e.getPlayer().getInventory().setItemInMainHand(item);
                 e.getPlayer().updateInventory();
-                target.sendMessage(translateColor(GDeathnote.getConfiguration().getString("messages.playerdeath-message").replace("{killed}", target.getName()).replace("{player}", e.getPlayer().getName())));
+                if (GDeathnote.getConfiguration().getBoolean("config.message-death")) {
+                    target.sendMessage(translateColor(GDeathnote.getConfiguration().getString("messages.playerdeath-message").replace("{killed}", target.getName()).replace("{player}", e.getPlayer().getName())));
+                }
                 target.setMetadata("KILLEDBYDN", new FixedMetadataValue(GDeathnote.getPlugin(GDeathnote.class), true));
 /*            items.put(target, target.getInventory().getContents());
             armors.put(target, target.getInventory().getArmorContents());
@@ -60,6 +62,9 @@ public class BookListeners implements Listener {
             e.getDrops().clear();
             e.setDeathMessage(null);
             e.setKeepInventory(true);
+            if (GDeathnote.getConfiguration().getBoolean("config.respawn-fast")) {
+                player.spigot().respawn();
+            }
         }
     }
 
